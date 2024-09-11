@@ -33,7 +33,10 @@
   <!-- <link rel="stylesheet" href="/static/css/default.css"> -->
   <link type="application/atom+xml" rel="alternate" href="{{ "/feed.xml" | absolute_url }}" title="{{ site.title }}" />
 
-  <title>{{ page.title }}</title>
+
+
+  
+    <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/static/css/default.css' | relative_url }}">
   <!-- Page-specific CSS -->
   {% if page.css %}
@@ -43,13 +46,15 @@
 
 <body>
   <header>
-    <h1>{{ site.title }}</h1>
+    
+    <h1><img width=" 50px" src="/static/assets/photos/binx.png">{{ site.title }}</h1>
   </header>
   <main>
     {{ content }}
   </main>
   <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    <!-- <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p> -->
+    <!-- <img src="./static/assets/photos/binxhillstiles.png" alt="" width="50px"> -->
   </footer>
 </body>
 
