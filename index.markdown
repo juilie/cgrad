@@ -14,9 +14,9 @@ css: "/static/css/home.css"
 <nav>
     <ul>
        <a class="button" style="margin-left: 20px;" href="./teaching/"><div class="shine"></div>Lessons</a>
-       <a class="button" style="margin-left: 40px;"><div class="shine"></div>Music</a>
-       <a class="button" style="margin-left: 60px;"><div class="shine"></div>Shows</a>
-       <a class="button" style="margin-left: 80px;"><div class="shine"></div>Bio</a>
+       <a class="button" style="margin-left: 40px;" href="./music"><div class="shine"></div>Music</a>
+       <a class="button" style="margin-left: 60px;" href="./shows/"><div class="shine"></div>Shows</a>
+       <a class="button" style="margin-left: 80px;" href="./bio/"><div class="shine"></div>Bio</a>
         <!-- <a href="/teaching/">
             <h2 style="margin-left: 20px;">Lessons</h2>
         </a>

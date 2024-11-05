@@ -12,3 +12,7 @@ plugins:
 
 include:
   - static
+
+collections:
+  music_projects:
+    output: false

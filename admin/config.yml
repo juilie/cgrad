@@ -37,3 +37,22 @@ collections:
       - { label: "Google Play Link", name: "google_play_link", widget: "string", required: false }
       - { label: "Deezer Link", name: "deezer_link", widget: "string", required: false }
       - { label: "Embed", name: "embed", widget: "string", required: false }
+  - name: "music_projects"
+    label: "Music Projects"
+    folder: "_music_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Category", name: "category", widget: "select", options: ["Solo Work", "Bands & Projects", "Ensembles"], required: true }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Order", name: "order", widget: "number", required: false }
+      - label: "Links"
+        name: "links"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Link Text", name: "text", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+      - { label: "Active", name: "active", widget: "boolean", default: true }
