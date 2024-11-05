@@ -1,43 +1,40 @@
 html {
   background-image: url('../assets/photos/binxlines.png');
   background-color: rgb(242, 229, 112);
-
   background-size: 40px;
   background-repeat: repeat;
-}
-
-html,
-body {
-  min-width: 100%;
-  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  width: 100%;
+  min-height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
-html {
-  /* Keep your existing binxlines background */
-  background-image: url('../assets/photos/binxlines.png');
-  background-color: rgb(242, 229, 112);
-  background-size: 40px;
-  background-repeat: repeat;
+html.loaded {
+  visibility: visible;
+  opacity: 1;
 }
 
 body {
-  /* Update the background to include a paper texture */
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   background-color: rgba(251, 241, 151, 0.687);
-  /* Add this subtle noise texture - you'll need to create or download a subtle_paper.png */
   background-image: url('../assets/textures/subtle_paper.png');
   background-blend-mode: multiply;
-  /* Optional: add some grain animation */
   animation: noise 0.5s steps(10) infinite;
+}
+
+main {
+  max-width: 100%;
 }
 
 @keyframes noise {
   0% { background-position: 0 0; }
   100% { background-position: 100% 100%; }
-}
-
-body {
-  background-color: rgba(251, 241, 151, 0.687);
 }
 
 header {
@@ -47,17 +44,18 @@ header {
   margin-bottom: 10px;
 }
 
+header a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 header img {
   width: 50px;
   height: 50px;
   flex-shrink: 0;
   filter: drop-shadow(10px 10px 4px #010102);
   animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
 }
 
 header h1 {
@@ -75,23 +73,25 @@ header h1 {
   font-size: 3em;
   letter-spacing: 1px;
   transform: rotate(-2deg);
+  text-align: center;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 .marquee {
-
-    /* background: #d7fed9; */
-    padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    border-style: outset;
-    background-color: rgba(255, 255, 224, 0.418);
-    margin: 20px 0;
-  }
-
-
-
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-style: outset;
+  background-color: rgba(255, 255, 224, 0.418);
+  margin: 20px 0;
+  margin-top: 0px;
+}
 
 footer {
   background-image: url('../assets/photos/binxhillstiles.png');
@@ -106,28 +106,26 @@ footer {
 }
 
 ul h2 {
-  width: fit-content;
+  width: 150px;
   background: rgb(215, 254, 217);
   border: 2px solid black;
   padding: 10px 20px;
   border-radius: 100%;
-  width: 150px;
   text-align: center;
-}
-
-a:visited {
-  color: rgb(0, 0, 0);
 }
 
 a {
   text-decoration: none;
 }
 
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
 ul h2:hover {
   background: rgb(24, 117, 73);
   color: white;
 }
-
 
 .button {
   min-height: 1.5em;
@@ -138,50 +136,25 @@ ul h2:hover {
   margin: 0px 5px 15px 0px;
   cursor: pointer;
   opacity: 0.9;
-
   color: #000;
   font-size: 1.5em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
-
   background: #d7fed9;
   border: 2px solid #242424;
   border-radius: 100%;
-
-  -webkit-border-radius: 100%;
-  -khtml-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -o-border-radius: 100%;
-  border-radius: 100%;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -khtml-box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -o-box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  /* -webkit-transition: all 0.05s linear; */
-  /* -khtml-transition: all 0.05s linear; */
-  /* -moz-transition: all 0.05s linear; */
-  /* -o-transition: all 0.05s linear; */
-  /* transition: all 0.05s linear; */
 }
 
 .button:hover {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -khtml-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -o-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
   background: rgb(24, 117, 73);
   color: white;
 }
 
 .button:active {
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0) 0px 1px 0px, inset rgba(0, 0, 0, 0.5) 0px 0px 5px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -khtml-box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0) 0px 1px 0px, inset rgba(0, 0, 0, 0.5) 0px 0px 5px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0) 0px 1px 0px, inset rgba(0, 0, 0, 0.5) 0px 0px 5px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
-  -o-box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0) 0px 1px 0px, inset rgba(0, 0, 0, 0.5) 0px 0px 5px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0) 0px 1px 0px, inset rgba(0, 0, 0, 0.5) 0px 0px 5px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
   background: rgb(24, 117, 73);
   color: white;
@@ -190,26 +163,12 @@ ul h2:hover {
 .shine {
   display: block;
   position: relative;
-  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=1);
-  background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
   padding: 0px 12px;
   top: -12px;
   left: -24px;
   height: 1px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 5px;
-  -khtml-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 5px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 5px;
-  -o-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 5px;
   box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -khtml-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -221,27 +180,6 @@ ul h2:hover {
   opacity: 0;
 }
 
-.button.gray {
-  background: #555;
-}
-
-.button.blue {
-  background: #3a617e;
-}
-
-.button.green {
-  background: #477343;
-}
-
-.button.red {
-  background: #723131;
-}
-
-.button.purple {
-  background: #4b3f5e;
-}
-
-/* Add this class to elements you want to have a sketchy border */
 .sketchy {
   position: relative;
   padding: 15px 20px;
@@ -257,19 +195,14 @@ ul h2:hover {
   bottom: -2px;
   border: 2px solid #000;
   border-radius: 3px;
-  /* Create a slightly wobbly border effect */
   filter: url('#rough');
 }
-
-/* Add this SVG filter to your HTML (can go in the default layout) */
 
 .hand-drawn-button {
   padding: 15px 25px;
   background: #d7fed9;
   border: 3px solid #000;
-  /* Rough, uneven border */
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  /* Add some dimension */
   box-shadow: 
     2px 2px 0 #000,
     4px 4px 0 #fff,
@@ -285,12 +218,9 @@ ul h2:hover {
     3px 3px 0 #000;
 }
 
-/* For text elements that look hand-drawn */
 .hand-drawn-text {
   font-family: 'Comic Sans MS', cursive;
-  /* Slightly irregular text */
   transform: rotate(-1deg);
-  /* Rough edge effect */
   filter: url('#rough');
 }
 
@@ -300,7 +230,7 @@ ul h2:hover {
     linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
     linear-gradient(#eee .1em, transparent .1em);
   background-size: 100% 1.2em;
-  padding: 20px 20px 20px 100px; /* Extra padding on left for margin */
+  padding: 20px 20px 20px 100px;
   border-radius: 3px;
   box-shadow: 
     0 0 0 1px #e3e3e3,
@@ -309,7 +239,6 @@ ul h2:hover {
   position: relative;
 }
 
-/* Add a red margin line */
 .notebook-paper::before {
   content: '';
   position: absolute;

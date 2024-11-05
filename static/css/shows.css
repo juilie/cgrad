@@ -64,8 +64,13 @@ section {
                 radial-gradient(90% 7% at 50% 8%, rgba(255, 255, 255, 0.47) 25%, rgba(255, 255, 255, 0) 50%),
                 #b3a136;
     color: #000000;
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.47), 0 -0.1em 0 0.1em rgba(0, 0, 0, 0.27), 0 0.1em 0 0.1em rgba(255, 255, 255, 0.27), -0.2em 0 0.2em #90812b inset, 0 0.2em 0.2em rgba(255, 255, 255, 0.27) inset, 0.2em 0 0.2em rgba(255, 255, 255, 0.27) inset, 0 -0.2em 0.2em #90812b inset;
 }
 
+.past-shows .show-tile:hover {
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.47), 0 -0.1em 0 0.1em rgba(0, 0, 0, 0.27), 0 0.1em 0 0.1em rgba(255, 255, 255, 0.27), -0.2em 0 0.2em #90812b inset, 0 0.2em 0.2em rgba(255, 255, 255, 0.27) inset, 0.2em 0 0.2em rgba(255, 255, 255, 0.27) inset, 0 -0.2em 0.2em #90812b inset;
+
+}
 .show-tile p {
     margin: 0;
 }
@@ -208,7 +213,7 @@ section h2 {
     /* Using green to match the upcoming shows */
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.13)),
                 radial-gradient(90% 7% at 50% 8%, rgba(255, 255, 255, 0.47) 25%, rgba(255, 255, 255, 0) 50%),
-                #197449;
+                #1a6600;
     border: 0;
     box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.47),
                 0 -0.1em 0 0.1em rgba(0, 0, 0, 0.27),
@@ -367,5 +372,13 @@ section:empty::before {
     color: rgba(0, 0, 0, 0.5);
     font-style: italic;
     padding: 2rem 0;
+}
+
+/* Add this style for the upcoming shows title */
+h2.upcoming-shows-title {
+    color: #f4efc3; /* Change this to match your show card color */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Optional: match the font style */
+    font-size: 2em; /* Adjust size as needed */
+    margin-bottom: 20px; /* Add some spacing below the title */
 }
 

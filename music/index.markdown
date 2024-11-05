@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Music
+title: Music | Calvin Grad
 css: "/static/css/music.css"
 ---
 
@@ -15,7 +15,7 @@ css: "/static/css/music.css"
   <section class="project">
     <h2>Solo Work</h2>
     {% for project in solo_work %}
-      <div class="project-tile">
+      <div class="project-tile" data-category="{{ project.category }}">
         <div class="project-info">
           <h3>{{ project.title }}</h3>
           {% if project.description %}
@@ -24,7 +24,7 @@ css: "/static/css/music.css"
           {% if project.links %}
             <div class="project-links">
               {% for link in project.links %}
-                <a href="{{ link.url }}" class="music-link">{{ link.text }}</a>
+                <a href="{{ link.url }}" target="_blank" class="music-link">{{ link.text }}</a>
               {% endfor %}
             </div>
           {% endif %}
@@ -38,7 +38,7 @@ css: "/static/css/music.css"
   <section class="project">
     <h2>Bands & Projects</h2>
     {% for project in bands %}
-      <div class="project-tile">
+      <div class="project-tile" data-category="{{ project.category }}">
         <div class="project-info">
           <h3>{{ project.title }}</h3>
           {% if project.description %}
@@ -61,7 +61,7 @@ css: "/static/css/music.css"
   <section class="project">
     <h2>Ensembles</h2>
     {% for project in ensembles %}
-      <div class="project-tile">
+      <div class="project-tile" data-category="{{ project.category }}">
         <div class="project-info">
           <h3>{{ project.title }}</h3>
           {% if project.description %}

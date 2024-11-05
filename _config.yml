@@ -12,7 +12,11 @@ plugins:
 
 include:
   - static
+  - _data
 
 collections:
   music_projects:
     output: false
+  shows:
+    output: false
+    sort_by: date

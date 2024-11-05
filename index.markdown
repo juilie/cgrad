@@ -1,9 +1,6 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
-title: Home
+title: Calvin Grad
 css: "/static/css/home.css"
 ---
 <div class="marquee">
@@ -17,18 +14,6 @@ css: "/static/css/home.css"
        <a class="button" style="margin-left: 40px;" href="./music"><div class="shine"></div>Music</a>
        <a class="button" style="margin-left: 60px;" href="./shows/"><div class="shine"></div>Shows</a>
        <a class="button" style="margin-left: 80px;" href="./bio/"><div class="shine"></div>Bio</a>
-        <!-- <a href="/teaching/">
-            <h2 style="margin-left: 20px;">Lessons</h2>
-        </a>
-        <a>
-            <h2 style="margin-left: 40px;">Music</h2>
-        </a>
-        <a>
-            <h2 style="margin-left: 60px;">Shows</h2>
-        </a>
-        <a>
-            <h2 style="margin-left: 80px;">Bio</h2>
-        </a> -->
     </ul>
 
 </nav>
