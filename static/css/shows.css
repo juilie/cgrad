@@ -292,7 +292,24 @@ section h2::after {
 }
 
 .show-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     font-size: 1.15em;
+    font-weight: 500;
+}
+
+.show-date-venue {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+}
+
+.show-time {
+    font-size: 0.75em;
+    opacity: 0.75;
+    font-weight: 400;
+    margin-top: -2px;  /* Pull it up slightly closer to venue */
 }
 
 .show-date {

@@ -23,8 +23,11 @@ css: "/static/css/shows.css"
             <div class="show-info">
               <h3 class="show-town">{{ show.town }}</h3>
               <div class="show-details">
+              <div class="show-date-venue">
                 <span class="show-date">{{ show.date | date: "%B %d" }}</span>
                 <span class="show-venue">{{ show.venue }}</span>
+                </div>
+                  <span class="show-time">{{ show.date | date: "%-I:%M %p" | strip }}</span>
               </div>
               {% if show.support %}
                 <span class="show-support">w/ {{ show.support }}</span>

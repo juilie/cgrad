@@ -23,7 +23,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(251, 241, 151, 0.687);
-  background-image: url('../assets/textures/subtle_paper.png');
   background-blend-mode: multiply;
   animation: noise 0.5s steps(10) infinite;
 }

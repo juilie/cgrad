@@ -20,3 +20,5 @@ collections:
   shows:
     output: false
     sort_by: date
+
+timezone: UTC
