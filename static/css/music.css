@@ -27,7 +27,7 @@ section.project {
 }
 
 section.project h2 {
-    font-family: 'Comic Sans MS', 'Comic Neue', cursive, sans-serif;
+    font-family: 'Comic Sans MS', 'ComicNeue';
     font-size: 1.6em;
     letter-spacing: 1px;
     transform: rotate(-1deg);

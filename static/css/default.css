@@ -233,7 +233,7 @@ ul h2:hover {
 }
 
 .hand-drawn-text {
-  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+  font-family: 'Comic Sans MS', 'ComicNeue';
   transform: rotate(-1deg);
   filter: url('#rough');
 }
