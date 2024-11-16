@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('/static/assets/fonts/ComicNeue-Regular.ttf') format('ttf');
+}
+
 body {
   display: flex;
   align-items: center;
@@ -62,7 +67,7 @@ main {
 }
 
 .rates-card h2 {
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
   font-size: 1.8em;
   text-align: center;
   margin: 0 0 20px 0;
@@ -185,7 +190,7 @@ main {
 }
 
 .form-container h2 {
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
   font-size: 1.6em;
   margin-bottom: 15px;
   transform: rotate(-1deg);

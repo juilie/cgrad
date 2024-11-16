@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'ComicNeue';
+    src: url('/static/assets/fonts/ComicNeue-Regular.ttf') format('ttf');
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
     padding: 20px;
+
     box-sizing: border-box;
 }
 
@@ -69,7 +75,7 @@ h1 {
 }
 
 .bio-text h2 {
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', 'Comic Neue', cursive;
     color: #000;
     margin-bottom: 30px;
     transform: rotate(-1deg);

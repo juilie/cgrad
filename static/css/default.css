@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'ComicNeue';
+  src: url('/static/assets/fonts/ComicNeue-Regular.ttf') format('ttf');
+}
+
+@font-face {
   font-family: 'Comic Sans MS';
   font-display: swap;
 }
@@ -228,7 +233,7 @@ ul h2:hover {
 }
 
 .hand-drawn-text {
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
   transform: rotate(-1deg);
   filter: url('#rough');
 }
